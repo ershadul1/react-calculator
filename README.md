@@ -11,7 +11,7 @@
 
 ## Live Demo
 
-- [Coming Soon!]()
+- [Open Calculator App](https://react-calculator-rayhan.herokuapp.com/)
 
 ## How to run this project on your local machine
 

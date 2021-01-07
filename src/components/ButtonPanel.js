@@ -11,21 +11,13 @@ const ButtonPanel = () => {
 
   return (
     <>
-      <div>
-        {groups.group1.map(value => <Button key={value} name={value} />)}
-      </div>
-      <div>
-        {groups.group2.map(value => <Button key={value} name={value} />)}
-      </div>
-      <div>
-        {groups.group3.map(value => <Button key={value} name={value} />)}
-      </div>
-      <div>
-        {groups.group4.map(value => <Button key={value} name={value} />)}
-      </div>
-      <div>
-        {groups.group5.map(value => <Button key={value} name={value} />)}
-      </div>
+      {
+        Object.keys(groups).map(groupName => (
+          <div key={groupName}>
+            {groups[groupName].map(value => <Button key={value} name={value} />)}
+          </div>
+        ))
+      }
     </>
   );
 };

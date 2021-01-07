@@ -1,14 +1,23 @@
-import Display from './Display'
-import ButtonPanel from './ButtonPanel'
+import PropTypes from 'prop-types';
+import Display from './Display';
+import ButtonPanel from './ButtonPanel';
 
-function App() {
+const App = () => {
+  const props = {
+    result: '0',
+  };
+  const { result } = props;
   return (
-    <div className="App">
-      <h1>Hello! React</h1>
-      <Display />
+    <>
+      <h1>Calculator</h1>
+      <Display result={result} />
       <ButtonPanel />
-    </div>
-    );
-}
+    </>
+  );
+};
+
+App.propTypes = {
+  result: PropTypes.string.isRequired,
+};
 
 export default App;

@@ -7,8 +7,8 @@ const calculate = (data, buttonName) => {
     copyData.next = null;
     copyData.operation = null;
   } else if (buttonName === '+/-') {
-    copyData.total = parseInt(copyData.total, 10) * (-1);
-    copyData.next = parseInt(copyData.next, 10) * (-1);
+    copyData.total *= -1;
+    copyData.next *= -1;
   } else if (buttonName === '%') {
     if (copyData.next == null) {
       copyData.total *= 0.01;

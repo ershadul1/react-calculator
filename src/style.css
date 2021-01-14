@@ -4,12 +4,19 @@
   box-sizing: border-box;
 }
 
+#root {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
 #random {
   color: red;
 }
 
 #calculator {
   width: 700px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 #display {
@@ -33,4 +40,32 @@
   border: 1px solid gray;
   font-size: 20px;
   font-weight: 500;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+#math-magicians {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+#links {
+  font-size: 30px;
+  color: black;
+  display: flex;
+}
+
+.link-style {
+  /* margin: 10px; */
+  padding: 10px;
+  text-decoration: none;
+}
+
+#home, #quote {
+  max-width: 1000px;
+  margin: 0 auto;
 }

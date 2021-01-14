@@ -7,21 +7,27 @@ const ButtonPanel = props => {
     group2: ['7', '8', '9', 'x'],
     group3: ['4', '5', '6', '-'],
     group4: ['1', '2', '3', '+'],
-    group5: ['0', '.', '='],
+    group5: ['', '0', '.', '='],
   };
 
   return (
-    <>
+    <div>
       {
         Object.keys(groups).map(groupName => (
           <div key={groupName}>
-            {groups[groupName].map(value => (
-              <Button key={value} name={value} clickHandler={props.clickHandler} />
-            ))}
+            {groups[groupName].map((value, index) => (value ? (
+              <Button
+                color={groups[groupName].length - 1 === index ? null : true}
+                wide={value === '0' ? true : null}
+                key={value}
+                name={value}
+                clickHandler={props.clickHandler}
+              />
+            ) : null))}
           </div>
         ))
       }
-    </>
+    </div>
   );
 };
 

@@ -21,13 +21,13 @@ const App = () => {
   const { total, next, operation } = state;
 
   return (
-    <>
+    <div id="calculator">
       <h1>
-        Calculator
+        Let&apos;s do some maths!
       </h1>
       <Display result={total || next || '0'} next={next} operation={operation} />
       <ButtonPanel clickHandler={handleClick} />
-    </>
+    </div>
   );
 };
 

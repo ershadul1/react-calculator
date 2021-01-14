@@ -60,12 +60,12 @@ nav {
 }
 
 .link-style {
-  /* margin: 10px; */
   padding: 10px;
   text-decoration: none;
 }
 
-#home, #quote {
+#home,
+#quote {
   max-width: 1000px;
   margin: 0 auto;
 }

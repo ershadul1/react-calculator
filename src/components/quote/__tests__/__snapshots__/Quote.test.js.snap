@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Quote snapshot test 1`] = `
+<div
+  id="quote"
+>
+  <h1>
+    Quote
+  </h1>
+  <p>
+    “The difference between the poet and the mathematician is that the poet tries to get his head into the heavens while the mathematician tries to get the heavens into his head.” ― G.K. Chesterton
+  </p>
+</div>
+`;

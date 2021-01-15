@@ -127,3 +127,67 @@ test('+ button shifts total to next if next is null', () => {
 
   expect(calculate(data, '+')).toStrictEqual(result);
 });
+
+test('addition', () => {
+  const data = {
+    total: '20',
+    next: '100',
+    operation: '+',
+  };
+
+  const result = {
+    total: '120',
+    next: null,
+    operation: null,
+  };
+
+  expect(calculate(data, '=')).toStrictEqual(result);
+});
+
+test('subtraction', () => {
+  const data = {
+    total: '20',
+    next: '100',
+    operation: '-',
+  };
+
+  const result = {
+    total: '80',
+    next: null,
+    operation: null,
+  };
+
+  expect(calculate(data, '=')).toStrictEqual(result);
+});
+
+test('multiplication', () => {
+  const data = {
+    total: '20',
+    next: '100',
+    operation: 'x',
+  };
+
+  const result = {
+    total: '2000',
+    next: null,
+    operation: null,
+  };
+
+  expect(calculate(data, '=')).toStrictEqual(result);
+});
+
+test('division', () => {
+  const data = {
+    total: '20',
+    next: '100',
+    operation: '÷',
+  };
+
+  const result = {
+    total: '5',
+    next: null,
+    operation: null,
+  };
+
+  expect(calculate(data, '=')).toStrictEqual(result);
+});

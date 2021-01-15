@@ -17,8 +17,8 @@ const ButtonPanel = props => {
           <div key={groupName}>
             {groups[groupName].map((value, index) => (value ? (
               <Button
-                color={groups[groupName].length - 1 === index ? null : true}
-                wide={value === '0' ? true : null}
+                color={groups[groupName].length - 1 !== index}
+                wide={value === '0'}
                 key={value}
                 name={value}
                 clickHandler={props.clickHandler}
